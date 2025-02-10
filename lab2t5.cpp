@@ -3,9 +3,9 @@ using namespace std;
 
 class GroceryStore {
 private:
-    string itemNames[100]; // Array to store item names
-    double itemPrices[100]; // Array to store item prices
-    int itemCount; // Number of items in inventory
+    string itemNames[100]; 
+    double itemPrices[100]; 
+    int itemCount; 
 
 public:
     // Constructor
@@ -13,7 +13,7 @@ public:
         itemCount = 0;
     }
 
-    // Method to add a new item
+  
     void addItem() {
         if (itemCount >= 100) {
             cout << "Inventory full! Cannot add more items.\n";
@@ -33,7 +33,7 @@ public:
         cout << "Item added: " << name << " - Rs." << price << endl;
     }
 
-    // Method to update the price of an item
+    
     void updatePrice() {
         string name;
         double newPrice;
@@ -52,7 +52,7 @@ public:
         cout << "Item not found!" << endl;
     }
 
-    // Method to display inventory
+    
     void viewInventory() {
         if (itemCount == 0) {
             cout << "Inventory is empty!\n";
@@ -65,7 +65,7 @@ public:
         }
     }
 
-    // Method to generate a receipt
+  
     void generateReceipt() {
         if (itemCount == 0) {
             cout << "Inventory is empty! No items available for purchase.\n";
