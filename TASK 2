@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+class teamug{
+	private:
+	string brand;
+	string color;
+	int capacity;
+	int CurrentFillLevel;
+	public:
+		teamug(string brand,string color,int capacity,int CurrentFillLevel);
+		
+	void siptea(){
+		if(CurrentFillLevel!=0){
+			--CurrentFillLevel;
+			cout<<"sip taken.";
+		}else{
+			cout<<"Refill";
+		}
+	}
+	void refill(){
+		if(CheckLevel()==0){
+			CurrentFillLevel=capacity;
+			cout<<"Cup filled to the max capacity"<<capacity;
+		}
+	}
+	int CheckLevel(){
+		return CurrentFillLevel;
+	}
+};
+int main(){
+	teamug mug1("omicron","Black",8,6);
+	mug1.siptea();
+	mug1.CheckLevel();
+	mug1.refill();
+	
+}
